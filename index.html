@@ -1,28 +1,32 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac 'n Luv</title>
-    
+
     <style>
-        /* 1. Force the Logo to be bigger */
+        /* 1. Force the Logo to be bigger without breaking the sidebar */
         img[alt*="logo"], 
         img[src*="logo"], 
         .b-img-w img, 
         .header-logo img {
-            max-height: 160px !important; 
+            max-height: 180px !important; 
             width: auto !important;
-            transform: none !important;
             display: block !important;
+            margin: 0 auto !important;
         }
 
-        /* 2. Hide the Webnode bar at the bottom */
+        /* 2. Surgical Removal of the Webnode footer ONLY */
         #footer-banner, 
         .webnode-footer, 
-        [class*="footer-banner"] { 
+        .wnd-footer,
+        div[style*="z-index: 10000"], 
+        div[style*="z-index: 10001"] { 
             display: none !important; 
+            visibility: hidden !important;
+            height: 0 !important;
         }
     </style>
 </head>
