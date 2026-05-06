@@ -8,18 +8,33 @@
     <title>Mac 'n Luv</title>
 
     <!-- 2. Your CSS Instructions (Styles) -->
-    <style>
-        /* This makes the logo big */
-        img[src*="logo"], .b-img-w img {
-            max-height: 180px !important;
-            width: auto !important;
-        }
+   <style>
+/* 1. FIX THE INVISIBLE TEXT: Remove that old [class*="webnode"] rule if it's there! */
 
-        /* This kills the watermark without hiding your site */
-        #footer-banner, .webnode-footer, .wnd-footer { 
-            display: none !important; 
-        }
-    </style>
+/* 2. MAKE LOGO HUGE & FIX SIDEBAR */
+.b-img-w img, .header-logo img, [class*="logo"] img {
+    max-height: 250px !important; /* Huge height */
+    width: 250px !important;      /* Force width */
+    max-width: none !important;
+    display: block !important;
+}
+
+/* Force the sidebar container to be wider for the big logo */
+.b-w-02, .header-logo-wrapper, .header-logo {
+    width: 300px !important;
+    max-width: 300px !important;
+}
+
+/* 3. KILL THE BLUE BAR (WITHOUT HIDING THE SITE) */
+#footer-banner, 
+.webnode-footer, 
+.wnd-footer,
+div[style*="z-index: 10000"] { 
+    display: none !important; 
+    visibility: hidden !important;
+    height: 0 !important;
+}
+</style>
 </head>
 <body>
     <!-- The rest of your site starts here -->
