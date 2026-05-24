@@ -9,7 +9,7 @@
 
     <!-- 2. Your CSS Instructions (Styles) -->
 <style>
-/* 1. Make the Logo the perfect size */
+/* 1. Logo size remains perfectly locked in */
 .b-img-w img, .header-logo img, [class*="logo"] img {
     max-height: 180px !important; 
     width: auto !important;
@@ -17,21 +17,13 @@
     margin: 0 auto !important;
 }
 
-/* 2. FORCE NAV BUTTONS TO BE VISIBLE (Dark Gray Text) */
-.menu-item a, 
-.wnd-nav-menu a, 
-nav a, 
-.b-nav-w a, 
-ul[class*="menu"] a {
-    color: #333333 !important; /* Elegant dark charcoal color so they stand out */
+/* 2. SUPER TEXT REVEAL: Targets links, list items, spans, and any wrapper inside nav elements */
+nav *, .menu *, .b-nav-w *, [class*="menu"] *, [class*="nav"] * {
+    color: #1a1a1a !important; 
     visibility: visible !important;
     opacity: 1 !important;
-    font-weight: bold !important; /* Makes them easier to read! */
-}
-
-/* Optional: Make the buttons change to your brand's yellow when you hover over them */
-.menu-item a:hover, nav a:hover {
-    color: #e5b02a !important; 
+    font-size: 16px !important;
+    font-weight: 700 !important;
 }
 
 /* 3. Keep that Blue Webnode Banner Dead */
