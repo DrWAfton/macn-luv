@@ -9,27 +9,37 @@
 
     <!-- 2. Your CSS Instructions (Styles) -->
 <style>
-/* 1. Fix Logo Size (Not too big, not too small) */
+/* 1. Make the Logo the perfect size */
 .b-img-w img, .header-logo img, [class*="logo"] img {
-    max-height: 140px !important; /* This is the "Just Right" size */
+    max-height: 180px !important; 
     width: auto !important;
     display: block !important;
     margin: 0 auto !important;
 }
 
-/* 2. Bring Back the Buttons */
-/* This removes the rule that hid your menu items */
-.menu-item, .wnd-nav-menu, [class*="menu"] {
-    display: block !important;
+/* 2. FORCE NAV BUTTONS TO BE VISIBLE (Dark Gray Text) */
+.menu-item a, 
+.wnd-nav-menu a, 
+nav a, 
+.b-nav-w a, 
+ul[class*="menu"] a {
+    color: #333333 !important; /* Elegant dark charcoal color so they stand out */
     visibility: visible !important;
     opacity: 1 !important;
+    font-weight: bold !important; /* Makes them easier to read! */
 }
 
-/* 3. Surgical Removal of ONLY the Blue Webnode Bar */
+/* Optional: Make the buttons change to your brand's yellow when you hover over them */
+.menu-item a:hover, nav a:hover {
+    color: #e5b02a !important; 
+}
+
+/* 3. Keep that Blue Webnode Banner Dead */
 #footer-banner, 
 .webnode-footer, 
 .wnd-footer,
-div[style*="z-index: 10000"] { 
+div[style*="z-index: 10000"],
+div[style*="z-index: 10001"] { 
     display: none !important; 
     visibility: hidden !important;
     height: 0 !important;
