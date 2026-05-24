@@ -17,16 +17,23 @@
     margin: 0 auto !important;
 }
 
-/* 2. HYPER-TARGETED MENU TEXT ONLY (Completely safe for the rest of the page) */
-.menu-item a, 
-.b-nav-w a, 
-ul.menu li a {
+/* 2. FORCE THE CONTENT WRAPPERS TO DISPLAY INLINE */
+.nav-menu, .wnd-nav-menu, .b-nav, .b-nav-w, #nav, nav, ul.menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 50px !important;
+    width: 100% !important;
+}
+
+/* Force the actual text inside the links to turn dark gray */
+.menu-item a, .wnd-nav-menu a, nav a, .b-nav-w a, ul.menu li a, .menu-item span {
     color: #1a1a1a !important; 
     visibility: visible !important;
     opacity: 1 !important;
     font-size: 16px !important;
     font-weight: 700 !important;
-    display: inline-block !important;
+    display: block !important;
 }
 
 /* 3. Keep that Blue Webnode Banner Dead */
