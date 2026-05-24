@@ -8,24 +8,24 @@
     <title>Mac 'n Luv</title>
 
     <!-- 2. Your CSS Instructions (Styles) -->
-   <style>
-/* 1. FIX THE INVISIBLE TEXT: Remove that old [class*="webnode"] rule if it's there! */
-
-/* 2. MAKE LOGO HUGE & FIX SIDEBAR */
+<style>
+/* 1. Fix Logo Size (Not too big, not too small) */
 .b-img-w img, .header-logo img, [class*="logo"] img {
-    max-height: 250px !important; /* Huge height */
-    width: 250px !important;      /* Force width */
-    max-width: none !important;
+    max-height: 140px !important; /* This is the "Just Right" size */
+    width: auto !important;
     display: block !important;
+    margin: 0 auto !important;
 }
 
-/* Force the sidebar container to be wider for the big logo */
-.b-w-02, .header-logo-wrapper, .header-logo {
-    width: 300px !important;
-    max-width: 300px !important;
+/* 2. Bring Back the Buttons */
+/* This removes the rule that hid your menu items */
+.menu-item, .wnd-nav-menu, [class*="menu"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
-/* 3. KILL THE BLUE BAR (WITHOUT HIDING THE SITE) */
+/* 3. Surgical Removal of ONLY the Blue Webnode Bar */
 #footer-banner, 
 .webnode-footer, 
 .wnd-footer,
