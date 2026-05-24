@@ -17,7 +17,7 @@
     margin: 0 auto !important;
 }
 
-/* 2. FORCE THE CONTENT WRAPPERS TO DISPLAY INLINE */
+/* 2. Menu Text Settings (Restoring original fonts) */
 .nav-menu, .wnd-nav-menu, .b-nav, .b-nav-w, #nav, nav, ul.menu {
     display: block !important;
     visibility: visible !important;
@@ -26,25 +26,37 @@
     width: 100% !important;
 }
 
-/* Force the actual text inside the links to turn dark gray */
 .menu-item a, .wnd-nav-menu a, nav a, .b-nav-w a, ul.menu li a, .menu-item span {
     color: #1a1a1a !important; 
     visibility: visible !important;
     opacity: 1 !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
     display: block !important;
+    /* RESTORE ORIGINAL FONT: Inherit tells it to grab Webnode's font style */
+    font-family: inherit !important; 
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    letter-spacing: inherit !important;
 }
 
-/* 3. Keep that Blue Webnode Banner Dead */
+/* 3. CRUSH THE BLUE BAR (Zero-Height Collapse) */
 #footer-banner, 
 .webnode-footer, 
 .wnd-footer,
+[class*="footer-banner"],
 div[style*="z-index: 10000"],
 div[style*="z-index: 10001"] { 
     display: none !important; 
     visibility: hidden !important;
-    height: 0 !important;
+    height: 0px !important;
+    max-height: 0px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+body, html {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
 }
 </style>
 </head>
